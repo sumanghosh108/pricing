@@ -1,15 +1,101 @@
 ---
-// Footer component with copyright and donation button
-// Validates Requirements: 6.1, 6.2, 6.3, 6.4, 6.5, 10.3
+// Footer component with links and copyright
 ---
 
-<footer class="bg-slate-900 text-white py-8" style="background-color: #0f172a; color: white; padding: 2rem 0;">
+<style>
+  .footer-link {
+    color: #94a3b8;
+  }
+  .footer-link:hover {
+    color: #34d399 !important;
+  }
+  footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+</style>
+
+<footer class="bg-slate-900 text-white py-12" style="background-color: #0f172a; color: white; padding: 3rem 0;">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" style="max-width: 80rem; margin: 0 auto; padding: 0 1rem;">
-    <div class="flex flex-col items-center justify-center space-y-4" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem;">
-      <!-- Copyright Text -->
-      <p class="text-slate-400 text-sm text-center" style="color: #94a3b8; font-size: 0.875rem; text-align: center;">
+    <!-- Footer Links Grid -->
+    <div class="grid grid-cols-2 md:grid-cols-5 gap-8 mb-8" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin-bottom: 2rem;">
+      <!-- Products Column -->
+      <div>
+        <h3 class="text-white font-semibold mb-4" style="color: white; font-weight: 600; margin-bottom: 1rem; font-size: 1rem;">Products</h3>
+        <ul class="space-y-2" style="display: flex; flex-direction: column; gap: 0.5rem;">
+          <li><a href="https://sumannaba.in" class="footer-link text-slate-400 hover:text-emerald-400 transition-colors" style="text-decoration: none; font-size: 0.875rem;">Machine Learning</a></li>
+          <li><a href="https://sumannaba.in" class="footer-link text-slate-400 hover:text-emerald-400 transition-colors" style="text-decoration: none; font-size: 0.875rem;">AI</a></li>
+          <li><a href="https://sumannaba.in" class="footer-link text-slate-400 hover:text-emerald-400 transition-colors" style="text-decoration: none; font-size: 0.875rem;">Database</a></li>
+          <li><a href="https://sumannaba.in" class="footer-link text-slate-400 hover:text-emerald-400 transition-colors" style="text-decoration: none; font-size: 0.875rem;">Analytics</a></li>
+        </ul>
+      </div>
+
+      <!-- Solutions Column -->
+      <div>
+        <h3 class="text-white font-semibold mb-4" style="color: white; font-weight: 600; margin-bottom: 1rem; font-size: 1rem;">Solutions</h3>
+        <ul class="space-y-2" style="display: flex; flex-direction: column; gap: 0.5rem;">
+          <li><a href="https://sumannaba.in" class="footer-link text-slate-400 hover:text-emerald-400 transition-colors" style="text-decoration: none; font-size: 0.875rem;">Machine Learning</a></li>
+          <li><a href="https://sumannaba.in" class="footer-link text-slate-400 hover:text-emerald-400 transition-colors" style="text-decoration: none; font-size: 0.875rem;">AI</a></li>
+          <li><a href="https://sumannaba.in" class="footer-link text-slate-400 hover:text-emerald-400 transition-colors" style="text-decoration: none; font-size: 0.875rem;">Database</a></li>
+          <li><a href="https://sumannaba.in" class="footer-link text-slate-400 hover:text-emerald-400 transition-colors" style="text-decoration: none; font-size: 0.875rem;">Analytics</a></li>
+        </ul>
+      </div>
+
+      <!-- Resources Column -->
+      <div>
+        <h3 class="text-white font-semibold mb-4" style="color: white; font-weight: 600; margin-bottom: 1rem; font-size: 1rem;">Resources</h3>
+        <ul class="space-y-2" style="display: flex; flex-direction: column; gap: 0.5rem;">
+          <li><a href="https://blog.sumannaba.in" class="footer-link text-slate-400 hover:text-emerald-400 transition-colors" style="text-decoration: none; font-size: 0.875rem;">Blog</a></li>
+          <li><a href="https://sumannaba.in" class="footer-link text-slate-400 hover:text-emerald-400 transition-colors" style="text-decoration: none; font-size: 0.875rem;">Integrations</a></li>
+        </ul>
+      </div>
+
+      <!-- About us Column -->
+      <div>
+        <h3 class="text-white font-semibold mb-4" style="color: white; font-weight: 600; margin-bottom: 1rem; font-size: 1rem;">About</h3>
+        <ul class="space-y-2" style="display: flex; flex-direction: column; gap: 0.5rem;">
+          <li><a href="https://sumannaba.in" class="footer-link text-slate-400 hover:text-emerald-400 transition-colors" style="text-decoration: none; font-size: 0.875rem;">About</a></li>
+          <li><a href="https://connect.sumannaba.in" class="footer-link text-slate-400 hover:text-emerald-400 transition-colors" style="text-decoration: none; font-size: 0.875rem;">Connect</a></li>
+        </ul>
+      </div>
+
+      <!-- Get started Column -->
+      <div>
+        <h3 class="text-white font-semibold mb-4" style="color: white; font-weight: 600; margin-bottom: 1rem; font-size: 1rem;">Get started</h3>
+        <ul class="space-y-2" style="display: flex; flex-direction: column; gap: 0.5rem;">
+          <li><a href="https://pricing.sumannaba.in" class="footer-link text-slate-400 hover:text-emerald-400 transition-colors" style="text-decoration: none; font-size: 0.875rem;">Pricing</a></li>
+          <li><a href="https://sumannaba.in" class="footer-link text-slate-400 hover:text-emerald-400 transition-colors" style="text-decoration: none; font-size: 0.875rem;">Free Trial</a></li>
+          <li><a href="https://sumannaba.in" class="footer-link text-slate-400 hover:text-emerald-400 transition-colors" style="text-decoration: none; font-size: 0.875rem;">Request a demo</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom Section -->
+    <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center" style="border-top: 1px solid #1e293b; padding-top: 2rem; display: flex; flex-direction: column; justify-content: space-between; align-items: center; gap: 1rem;">
+      <!-- Copyright -->
+      <p class="text-slate-400 text-sm" style="color: #94a3b8; font-size: 0.875rem;">
         © 2026 Suman Ghosh. All rights reserved.
       </p>
+
+      <!-- Social Links -->
+      <div class="flex items-center space-x-4" style="display: flex; align-items: center; gap: 1rem;">
+        <a href="https://github.com/sumanghosh108" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors" style="color: #94a3b8; text-decoration: none;">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" style="width: 1.25rem; height: 1.25rem;">
+            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+          </svg>
+        </a>
+        <a href="https://linkedin.com/in/sumanghosh108" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors" style="color: #94a3b8; text-decoration: none;">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" style="width: 1.25rem; height: 1.25rem;">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+        </a>
+        <a href="https://twitter.com/sumanghosh108" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors" style="color: #94a3b8; text-decoration: none;">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" style="width: 1.25rem; height: 1.25rem;">
+            <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+          </svg>
+        </a>
+      </div>
     </div>
   </div>
 </footer>
