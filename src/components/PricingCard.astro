@@ -1,0 +1,53 @@
+---
+interface Props {
+  title: string;
+  price: string;
+  features: string[];
+  recommended?: boolean;
+}
+
+const { title, price, features, recommended = false } = Astro.props;
+---
+
+<div class="relative bg-slate-700 rounded-xl shadow-2xl hover:shadow-3xl hover:scale-105 transition-all duration-300 p-4 pb-6 flex flex-col h-full w-full" style="background-color: #334155; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); min-height: 350px; width: 100%; max-width: 100%; border: none; padding: 1rem; padding-bottom: 1.5rem;">
+  {recommended && (
+    <div class="absolute -top-3 left-1/2 transform -translate-x-1/2" style="position: absolute; top: -0.75rem; left: 50%; transform: translateX(-50%);">
+      <span class="bg-gradient-to-r from-blue-500 to-purple-600 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-lg" style="background: linear-gradient(to right, #3b82f6, #9333ea); color: white; font-size: 0.75rem; font-weight: 600; padding: 0.25rem 0.75rem; border-radius: 9999px;">
+        Recommended
+      </span>
+    </div>
+  )}
+  
+  <div class="text-center mb-4 pt-2" style="text-align: center; margin-bottom: 1rem; padding-top: 0.5rem;">
+    <h3 class="text-lg font-bold text-white mb-2" style="font-size: 1.125rem; font-weight: 700; color: white; margin-bottom: 0.5rem;">{title}</h3>
+    <p class="text-2xl font-bold text-blue-400" style="font-size: 1.5rem; font-weight: 700; color: #60a5fa;">{price}</p>
+  </div>
+  
+  <ul class="space-y-2 flex-grow" style="flex-grow: 1; margin-bottom: 1rem;">
+    {features.map((feature) => (
+      <li class="flex items-start" style="display: flex; align-items: flex-start; margin-bottom: 0.5rem;">
+        <svg 
+          class="w-4 h-4 text-green-400 mr-2 flex-shrink-0 mt-0.5" 
+          style="width: 1rem; height: 1rem; color: #4ade80; margin-right: 0.5rem; flex-shrink: 0; margin-top: 0.125rem;"
+          fill="none" 
+          stroke="currentColor" 
+          viewBox="0 0 24 24"
+        >
+          <path 
+            stroke-linecap="round" 
+            stroke-linejoin="round" 
+            stroke-width="2" 
+            d="M5 13l4 4L19 7"
+          />
+        </svg>
+        <span class="text-slate-300 text-xs" style="color: #cbd5e1; font-size: 0.75rem;">{feature}</span>
+      </li>
+    ))}
+  </ul>
+  
+  <div style="margin-top: 1rem;">
+    <a href="https://sumannaba.in/payment" target="_blank" rel="noopener noreferrer" class="pricing-button w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3 px-6 rounded-full transition-colors duration-300 block text-center" style="width: 100%; background-color: #10b981; color: white; font-weight: 700; padding: 0.75rem 1.5rem; border-radius: 9999px; border: none; cursor: pointer; text-decoration: none; display: block; text-align: center; font-size: 1rem;">
+      Select
+    </a>
+  </div>
+</div>

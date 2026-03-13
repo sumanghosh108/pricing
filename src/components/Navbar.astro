@@ -1,0 +1,47 @@
+---
+// Navbar component with sticky positioning and responsive behavior
+// Validates Requirements: 2.1, 2.2, 2.3, 2.4, 2.5, 11.2
+---
+
+<nav class="fixed top-0 left-0 right-0 z-50 bg-slate-900 border-b border-slate-700" style="position: fixed; top: 0; left: 0; right: 0; z-index: 50; background-color: #0f172a; border-bottom: 1px solid #334155;">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" style="max-width: 80rem; margin: 0 auto; padding: 0 1rem;">
+    <div class="flex items-center justify-between h-16" style="display: flex; align-items: center; justify-content: space-between; height: 4rem;">
+      <!-- Logo on the left -->
+      <div class="flex-shrink-0">
+        <a href="/" class="hover:opacity-80 transition-opacity duration-300" style="text-decoration: none;">
+          <img src="/logo_port.png" alt="Sumannaba" class="h-10 w-auto" style="height: 2.5rem; width: auto;" />
+        </a>
+      </div>
+      
+      <!-- Navigation links on the right -->
+      <div class="flex items-center space-x-8" style="display: flex; align-items: center; gap: 2rem;">
+        <a 
+          href="/" 
+          class="text-white hover:text-blue-400 transition-colors duration-300 font-medium"
+          style="color: white; font-weight: 500; text-decoration: none;"
+        >
+          Home
+        </a>
+        <a 
+          href="#pricing" 
+          class="text-white hover:text-blue-400 transition-colors duration-300 font-medium"
+          style="color: white; font-weight: 500; text-decoration: none;"
+        >
+          Pricing
+        </a>
+        <a 
+          href="https://connect.sumannaba.in" 
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-white hover:text-blue-400 transition-colors duration-300 font-medium"
+          style="color: white; font-weight: 500; text-decoration: none;"
+        >
+          Help
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Spacer to prevent content from hiding under fixed navbar -->
+<div class="h-16"></div>
